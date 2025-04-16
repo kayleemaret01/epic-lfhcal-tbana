@@ -54,7 +54,7 @@ class DataAnalysis{
   inline void SetRootOutputHists(TString name)   {RootOutputNameHist =name;};
   inline void SetPlotOutputDir(TString name)     {OutputNameDirPlots =name;};
   inline void SetPlotExtension(TString name)     {plotSuffix = name;};
-  
+  inline void SetMaximumEvents(int numevents)    {eventNumber = numevents;};
   //General methods
   bool CreateOutputRootFile(void);
   bool CreateOutputRootFileHist(void);
@@ -77,6 +77,7 @@ class DataAnalysis{
   bool Overwrite              =false;     // Flag to overwrite outputs
   int debug                   =0;         // debug level 
   int yearData                =-1;        // data taking year externally set
+  int eventNumber             =-1;        // maximum events externally set
   RootSetupWrapper rsw;                   // Wrapper singleton class for setup
   RootSetupWrapper* rswptr;               // Pointer to wrapper for singleton class for setup
   Setup* setup;                           // geometry setup

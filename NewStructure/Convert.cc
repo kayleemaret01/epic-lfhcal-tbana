@@ -33,6 +33,7 @@ void PrintHelp(char* exe){
   std::cout<<"-i uuu   Input file in root format"<<std::endl;
   std::cout<<"-m www   Name of mapping file  2024 PS TB [../configs/mappingFile_202409_CAEN.txt] "<<std::endl;
   std::cout<<"-o vvv   Output file name (mandatory)"<<std::endl;
+  std::cout<<"-n"<<std::end;
   std::cout<<"-O kkk   Output directory name for plots (mandatory)"<<std::endl;
   std::cout<<"-r rrr   Name of run list file  2024 PS TB [../configs/DataTakingDB_202409_CAEN.csv] "<<std::endl;
   std::cout<<"-y yyyy  setting year externally to narrow parameters"<<std::endl;
