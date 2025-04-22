@@ -83,6 +83,7 @@ bool DataAnalysis::CheckAndOpenIO(void){
     return false;
   }  
   
+  /////////////////////////////////////////////////////////
   //Setup Output files
   if(!RootOutputName.IsNull()){    
     
@@ -109,8 +110,9 @@ bool DataAnalysis::CheckAndOpenIO(void){
     std::cout<<"Output file name is missing, please add"<<std::endl;
     return false;
   }  
-  
+
   return true;
+
 }
 
 // ****************************************************************************
@@ -257,6 +259,12 @@ bool DataAnalysis::QAData(void){
 
   
   int evts=TdataIn->GetEntries();
+
+  if ((eventNumber > -1) && (eventNumber <= evts)) {
+    evts = eventNumber;
+    std::cout<<"Restricting number of events in QA to " << evts << std::endl;
+  }
+
   int evtsMuon= 0;
   for(int i=0; i<evts; i++){
     TdataIn->GetEntry(i);

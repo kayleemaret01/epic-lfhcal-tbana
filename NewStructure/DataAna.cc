@@ -117,6 +117,8 @@ int main(int argc, char* argv[]){
     return -1;
   }
 
+return 0; //to keep it from running the Process function
+
   AnAnalysis.Process();
   std::cout<<"Exiting"<<std::endl;
   return 0;

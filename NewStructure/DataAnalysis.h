@@ -41,19 +41,19 @@ class DataAnalysis{
   
   //setter methods
   //Overload method for boolean...or is it too dangerous?
-  inline void CanOverWrite(bool b)               {Overwrite=b;};
-  inline void IsCalibSaveToFile(bool b)          {SaveCalibToFile=b;};
-  inline void SetExtPlotting(short b)            {ExtPlot = b;};
-  inline void EnableDebug(int i)                 {debug=i;};
-  inline void IsToRunQA(bool b)                  {RunQA=b;};
+  inline void CanOverWrite(bool b)               {Overwrite=b;};          //createoutput
+  inline void IsCalibSaveToFile(bool b)          {SaveCalibToFile=b;};    //createoutput
+  inline void SetExtPlotting(short b)            {ExtPlot = b;};          //qadata
+  inline void EnableDebug(int i)                 {debug=i;};              //Debug none, debug in qadata
+  inline void IsToRunQA(bool b)                  {RunQA=b;};              //IsTo none, RunQA in process
   
-  inline void SetYear(int year)                  {yearData=year;};
-  inline void SetRunListInput(TString name)      {RunListInputName=name;};
-  inline void SetRootInput(TString name)         {RootInputName=name;};
-  inline void SetRootOutput(TString name)        {RootOutputName =name;};
-  inline void SetRootOutputHists(TString name)   {RootOutputNameHist =name;};
-  inline void SetPlotOutputDir(TString name)     {OutputNameDirPlots =name;};
-  inline void SetPlotExtension(TString name)     {plotSuffix = name;};
+  inline void SetYear(int year)                  {yearData=year;};            
+  inline void SetRunListInput(TString name)      {RunListInputName=name;};     //qadata
+  inline void SetRootInput(TString name)         {RootInputName=name;};       //checkIO
+  inline void SetRootOutput(TString name)        {RootOutputName =name;};     //checkIO
+  inline void SetRootOutputHists(TString name)   {RootOutputNameHist =name;}; //checkIO
+  inline void SetPlotOutputDir(TString name)     {OutputNameDirPlots =name;}; 
+  inline void SetPlotExtension(TString name)     {plotSuffix = name;};        //qadata
   inline void SetMaximumEvents(int numevents)    {eventNumber = numevents;};
   //General methods
   bool CreateOutputRootFile(void);
