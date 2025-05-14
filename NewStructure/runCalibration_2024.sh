@@ -74,6 +74,13 @@ elif [ $1 = "eglimos" ]; then
 	dataDirOut=/home/ewa/EIC/test_beam2024/fullScanC/Output/MuonRuns
 	dataDirOutE=/home/ewa/EIC/test_beam2024/fullScanC/Output/ElectronRuns
 	dataDirOutH=/home/ewa/EIC/test_beam2024/fullScanC/Output/HadronRuns
+elif [ $1 = "kmaret" ]; then
+	dataDirRaw=/home/mnt/d/work/NewStructure
+	dataDirRawE=/home/mnt/d/work/NewStructure
+	dataDirRawH=/home/mnt/d/work/NewStructure
+	dataDirOut=/home/mnt/d/work/NewStructure
+	dataDirOutE=/home/mnt/d/work/NewStructure
+	dataDirOutH=/home/mnt/d/work/NewStructure
 else
 	echo "Please select a known user name, otherwise I don't know where the data is"
 	exit

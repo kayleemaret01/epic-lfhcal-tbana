@@ -12,6 +12,8 @@ elif [ $1 = "eglimos" ]; then
 	dataRaw=/home/ewa/EIC/test_beam2024/fullScanC
 elif [ $1 = "vandrieu" ]; then
     dataDir=/home/vandrieu/cernbox/ePIC_2024_PStestbeam/CAEN_RO
+elif [ $1 = "kmaret" ]; then
+    dataDir=/home/mnt/d/202408_PST9
 else
 	echo "Please select a known user name, otherwise I don't know where the data is"
 	exit
